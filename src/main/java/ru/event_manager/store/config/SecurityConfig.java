@@ -17,7 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/auth").permitAll() // Разрешаем доступ к главной странице и auth
                 .anyRequest().authenticated() // Все остальные страницы требуют аутентификации
                 .and()
-                .formLogin().disable(); // Отключаем стандартную форму логина
+                .csrf().disable(); // Отключаем стандартную форму логина
     }
 
 
