@@ -12,7 +12,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable() // Отключаем CSRF для упрощения (не рекомендуется в продакшене)
                 .authorizeRequests()
                 .antMatchers("/", "/auth").permitAll() // Разрешаем доступ к главной странице и auth
                 .anyRequest().authenticated() // Все остальные страницы требуют аутентификации
