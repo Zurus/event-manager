@@ -32,9 +32,4 @@ public class CommonController {
         // Если аутентификация успешна, перенаправляем на другую страницу
         return "redirect:/home"; // Переход на страницу после успешной авторизации
     }
-
-    @GetMapping("/home")
-    public String home(@AuthenticationPrincipal Authentication authentication) {
-        return "home"; // Ваша страница после авторизации
-    }
 }
